@@ -1,0 +1,310 @@
+@charset "utf-8"; /*necessario para evitar erros ortograficos */
+@font-face {/*aqui posso conlocar uma fonte personalizada*/
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+
+
+
+
+
+
+
+/*---------------FORMATAÇÃO GERAL-------------------------------------*/
+
+P{
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a {/* ----------------formatação dos links---------------------*/
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;/*sempre que passar o mouse vai aparecer o sublinhado*/
+}
+
+
+body{
+   /*background-image: url(""); vai colocar a imagem como fundo do site*/ 
+    background-color: #dddddd;
+    color: rgb(72,45,45);
+    font-family: Arial, sans-serif;
+}
+
+div#interface {
+    width: 1200px;
+    background-color: white;
+    margin: -20px auto 0px auto ;/*para centralizar devo trabalhar com as margens, sempre a segunda e quarta são direita e esquerda*/
+    box-shadow: 0px 0px 10px black;/*sobreado no contaner*/
+    padding: 10px 10px 10px 10px ;/*espaço dentro do contaner, se qu quisesse poderia colocar apenas 1 vez 10px que a tag enteria para todos os lados*/
+}
+
+
+
+
+
+
+
+
+/*-----------------------FORMATAÇÃO DO CABEÇALHO--------*/
+
+header#cabecalho img#icone{
+    position: absolute;  /*passa por cima dos documentos e fica em qualquer posição da tela ja a posição relativa fica preso dentro do contaner*/
+    left:1400px;/*layout*/
+    top: 60px;/*layout*/
+ 
+    
+}
+
+header#cabecalho{
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+
+header#cabecalho h1 {/*formatação da logo google glass*/
+    font-family: 'FonteLogo', sans-serif; /*aqui eu coloquei uma fonte personalizada chamada FonteLogo*/
+    font-size: 30px;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px; /*margem de baixo para juntar com a frase h2*/
+}
+
+header#cabecalho h2{/*formatação da frase abaixo da logo*/
+    font-family: Arial, sans-serif;
+    color: #888888;
+    font-size: 15px;
+    padding: 0px;
+    margin-top: 0px;/*margem de cima para juntar com a logo h1*/
+}
+
+
+
+
+
+
+
+/*-------------------FORMATAÇÃO DA IMAGEM---------------------------------------------*/
+figure.foto-legenda{
+   position: relative; /*VAI FICAR EXATAMENTE NA POSIÇÃO QUE ESTÁ NO CODIGO*/
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black; /*BOX-SHODOW CRIA SOMBRA*/
+}
+
+figure.foto-legenda img{ /*adapta a imagem ao tamanho do dispositivo*/
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption{ /* FIGCAPTION É ONDE ESTÁ  A LEGENDA ABAIXO É O ESTILO DELA*/
+opacity: 0;
+position: absolute; /* POSIÇÃO ABSOLUTA DENTRO DO SEU CONTANER FIGURE(BORDA BRANCA)*/
+top: 0px; /*VAI FICAR NA PARTE SUPERIOR DO CONTANER*/
+background-color: rgba(0,0,0,.4);/*COR DO FUNDO COM TRANSPARENCIA*/
+color: white;/*COR DA LETRA*/
+width: 100%;/*OCUPA TODO ESPAÇO DENTRO DA IMAGEM*/
+height: 100%;
+padding: 50px;
+box-sizing: border-box;/*CRIA UM BOX DENTRO DA BORDA*/
+transition:opacity 1s; /*TEMPO PARA SUMIR A LEGENDA*/
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1; /* QUANDO PASSAR O MOUSE VAI APARECER A LEGENDA*/
+}
+
+
+
+
+
+
+
+
+/*----------------------------FORMATAÇÃO DO MENU------------------------------------------*/
+
+nav#menu {
+    position: block;/*o bloco pode flutuar pela tela*/
+}
+
+nav#menu ul {
+    list-style: none; /*tira as bolinhas*/
+    text-transform: uppercase;/*deixa tudo em letras maiusculas*/
+    position: absolute; /*passa por cima dos documentos e fica em qualquer posição da tela ja a posição relativa fica preso dentro do contaner*/
+    top: -20px;
+    left: 900px;
+}
+
+nav#menu li {
+    display: inline-block; /*vai deixar um do lado do outro*/
+    background-color: #dddd;
+    padding: 10px; /*controla o espaço dentro do objeto*/
+    margin: 2px; /*controla o espaço fora do objeto*/
+    transition: background-color 1s;/*tempo para mudar a transição de cor*/
+}
+
+nav#menu li:hover {
+    background-color: #606060/*transição ao passar o mouse*/
+}
+
+nav#menu h1{
+    display: none;/*vai ficar ocuto no site */
+}
+
+nav#menu a{
+    color: black;
+    text-decoration: none; /*tira o sublinhado*/
+}
+
+nav#menu a:hover {/*transição do link*/
+    color: white;
+    text-decoration: underline;
+
+}
+
+/*----------------------------FORMATAÇÃO DO MENU------------------------------------------*/
+
+
+
+
+
+
+
+/*----------------------FORMATAÇÃO DO BLOCO PRINCIPAL + TABELA -------------------------*/
+
+section#corpo {
+    display: block; /*importante para ficar em bloco*/
+    width: 700px;/*tamanho do bloco*/
+    float: left;/*coloca o bloco pra esquerda*/
+    border-right: 1px solid #606060;
+    padding-right: 20px;
+}
+
+article#noticia-principal h2 {
+    font-size:  12px;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20px;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: opx;
+
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13px;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3{
+    font-size: 12px;
+    color: #606060;
+}
+.direita{
+    text-align: right;
+}
+
+table#tabelaspec {
+    border: 1px solid #606060; /*borda externa*/
+    border-spacing: 0px; /*espaço entre as cedulas*/
+    margin-left: auto;/*deixar tabela no meio do bloco*/
+    margin-right: auto;/*deixar tabela no meio do bloco*/
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060;/*linhas internas*/
+    padding: 10px; /*espaço interno da cedula*/
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.ce {/* formatação da coluna esquerda*/
+    color: white;
+    background-color: #606060;
+    vertical-align: top; /* a classe vai sobrepor o que foi definido pra tag principal e alinhar na primeira linha*/
+    font-weight: bolder;/* negrito */
+}
+
+table#tabelaspec td.cd{/* fromatação da culana da direita*/
+    background-color: #cecece;
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: #000000;
+    font-size:  8px;
+    margin-top: 10px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+aside#lateral {
+display: block;/*importante para ficar em bloco*/
+width: 450px;
+float: right;/*coloca o bloco para direita*/
+background-color: #dddddd;
+padding: 10px;
+margin-top: 10px;
+box-shadow: 2px 2px 2px rbga(0,0,0,.5);
+}
+aside#lateral h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+footer#rodape {
+    clear: both; /*vai fazer o rodape ficar fora da divisão corpo e lateral - importa para formatar */
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
+
+
+video#filmeOutros {
+    display: block;
+    position:relative;
+    left: 0px;
+    top: 0px;
+    width: 430px;
+    padding: 5px;
+    align-items: center;
+}

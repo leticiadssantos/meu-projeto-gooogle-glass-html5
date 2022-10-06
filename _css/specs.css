@@ -1,0 +1,21 @@
+@charset "UTF-8";
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+
+}
+
+iframe#frame-spec {
+    width: 450px;
+    height: 300px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    border: none; /*remove a borda */
+    overflow: hidden; /*evita que a rolagem aconteça*/
+}
+
+
+/*iframe#frame-spec::-webkit-scrollbar{
+    display: none;
+} nao funcionou então tive que ir no iframe e colocar scrolling= "no" ---------*/
