@@ -11,8 +11,18 @@
     <link rel="stylesheet" href="_css/form.css">
 </head>
 
-<!--COLOQUEI OS CÓDIGOS JAVASCRIPT EM UM ARQUIVO SEPARADO FUNCOES.JS e chamei com o comando abaixo-->
+<!--COLOQUEI OS CÓDIGOS JAVASCRIPT EM UM ARQUIVO SEPARADO FUNCOES.JS e chamei com o comando abaixo
+
+var qtd = parseInt(document.getElementById(cquant).value); é uma variavel para amarzenar o que o usuario digitou na cquant-->
 <script languange="javascript" src="_javascript/funcoes.js"></Script>
+    <script>
+        function calc_total(){
+            var qtd = parseInt(document.getElementById('cquant').value);
+            tot = qtd * 1500;
+            document.getElementById('cTotal').value = tot;
+
+        }
+    </script>
 
 <body>
     <div id="interface">
@@ -75,8 +85,10 @@
                 action vai enviar oa=s dados no e-mail, ha também outras linguagens que salvo e tratado por um banco de dados exemplo php.
 
                 TEXTAREA permite varias informações ja o TEXT comum somente uma liha.
+
+                oninput="" = quando digitar qualquer coisa ira disparar um procedimento.
             -->
-                <form action="leticiasantospromkt@gmail.com" method="post" id="fcontato">
+                <form action="leticiasantospromkt@gmail.com" method="post" id="fcontato" oninput="calc_total()">
                     <fieldset id="usuario">
                         <legend>Identificação do Usuário</legend>
 
@@ -150,14 +162,14 @@
 
                     <fieldset id="pedido">
                         <legend>Quero um Google Glass</legend>
-                        <p>Gostaria de adquirir um Google Glass quando</p>
-                        <p>disponível</p>
-                        <p>Cor:</p>
-                        <p>Quantidade:</p>
-                        <p>Preço Total: R$</p>
+                        <p><input type="checkbox" name="tPedido" id="cPedido" checked><label for="cPedido">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                        <p><input type="color" name="tColor" id="ccolor" value="#0000ff"><label for="ccolor">Cor:</label></p>
+                        <p>Quantidade:<input type="number" name="tquant" id="cquant" min="0" max="5" value="0"><label for="cquant"></label></p> 
+                        <p><label for="cTotal">R$ Preço Total: <input type="text" name="tTotal" id="cTotal" placeholder="Total a pagar" readonly></label> </p>
                     </fieldset>
 
-                    [BOTÃO ENVIAR]
+                    <!--<input type="submit" value="enviar">-->
+                    <input type="image" name="tEnviar" id="" src="_imagens/botao-enviar.png">
 
                 </form>
             <article>
