@@ -68,45 +68,85 @@
 
 
 
-               <!-- o label serve para identificar o objeto relativo a ele... possui funcionalidade semantica, assim o objeto torna-se clicavel para o usuário-  -->
-                <form action="">
+                <!-- o label serve para identificar o objeto relativo a ele... possui funcionalidade semantica, assim o objeto torna-se clicavel para o usuário. 
+
+                GET = rapido e menos seguro              POST = lento e mais seguro.
+
+                action vai enviar oa=s dados no e-mail, ha também outras linguagens que salvo e tratado por um banco de dados exemplo php.
+
+                TEXTAREA permite varias informações ja o TEXT comum somente uma liha.
+            -->
+                <form action="leticiasantospromkt@gmail.com" method="post" id="fcontato">
                     <fieldset id="usuario">
                         <legend>Identificação do Usuário</legend>
 
                         <p><label for="cnome">Nome:</label>
-                            <input type="text" name="tname" id="cnome" size="20" maxlength="30" placeholder="Nome completo"/></p>
+                            <input type="text" name="tname" id="cnome" size="20" maxlength="30"
+                                placeholder="Nome completo"/></p>
 
                         <p><label for="csenha">Senha:</label>
-                            <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 digitos"/></p>
+                            <input type="password" name="tsenha" id="csenha" size="8" maxlength="8"
+                                placeholder="8 digitos" /></p>
 
-                        <p><label for="cmail">E-mail: </label><input type="email" name="tmail" id="cmail" size="20" maxlength="20" placeholder="E-mail"/></p>
+                        <p><label for="cmail">E-mail: </label><input type="email" name="tmail" id="cmail" size="20"
+                                maxlength="20" placeholder="E-mail" /></p>
 
 
 
                         <fieldset id="sexo">
                             <legend>Sexo:</legend>
-                            <input type="radio" name="tsexo" id="cmasculino"/><label for="cmasculino">Masculino</label><br/>
-                            <input type="radio" name="tsexo" id="cfeminino"/><label for="cfeminino">Feminino</label>
+                            <input type="radio" name="tsexo" id="cmasculino" /><label
+                                for="cmasculino">Masculino</label><br />
+                            <input type="radio" name="tsexo" id="cfeminino" /><label for="cfeminino">Feminino</label>
                         </fieldset>
 
-                        
+
                         <p>Data de Nascimento:<input type="date" id="cdate"></p>
                     </fieldset>
 
+
+
                     <fieldset id="endereco">
                         <legend>Endereço do Usuário</legend>
-                        <p><label for="crua">Logradouro: </label><input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="Rua, Atravessa, Avenida"></p>
-                        <p><label for="cnumero">Número:</label><input type="number" name="tnumero" id="cnumero" size="13" maxlength="80" min="0" max="99999"></p>
-                        <p><label for="cestado">Estado:</label></p>
-                        <p><label for="ccidade">Cidade:</label></p>
+                        <p><label for="crua">Logradouro: </label><input type="text" name="trua" id="crua" size="13"
+                                maxlength="80" placeholder="Rua, Atravessa, Avenida"></p>
+                        <p><label for="cnumero">Número:</label><input type="number" name="tnumero" id="cnumero"
+                                size="13" maxlength="80" min="0" max="99999"></p>
+                        <p><label for="cestado">Estado:</label>
+                            <select name="cestado" id="cestado">
+                                <optgroup label="Sudeste">
+                                    <option value="SP" selected>São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                </optgroup>
+                                <optgroup label="Sul">
+                                    <option value="PA">Paraná</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <p><label for="ccidade">Cidade:</label><input type="text" name="tCid" maxlength="15" size="15" placeholder="Sua Cidade" list="cidades"></p>
+                        <datalist id="cidades">
+                            <option value="Diadema"></option>
+                            <option value="Jabaquara"></option>
+                            <option value="São Paulo"></option>
+                            <option value="Santo Amaro"></option>
+                        </datalist>
                     </fieldset>
 
 
                     <fieldset id="mensagem">
                         <legend> Mensagem do Usuário</legend>
-                        <p>Grau de Urgência:</p>
-                        <P>Mensagem:</P>
+                        <p><label for="curg">Grau de Urgência:</label>
+                        Min<input type="range" id="curg" min="0" max="10" step="5">Max</p>
+                        
+                        <P><label for="cmsg">Mensagem:</label>
+                        <textarea name="tmsg" id="cmsg" cols="50" rows="3" placeholder="Deixe aqui sua mensagem"></textarea></P>
                     </fieldset>
+
+
+
 
                     <fieldset id="pedido">
                         <legend>Quero um Google Glass</legend>
@@ -119,18 +159,17 @@
 
                     [BOTÃO ENVIAR]
 
-                    </form>
-                <article>
+                </form>
+            <article>
         </section>
         <!--Ao colocar paragrafo e o nivel do titulo, o texto como um todo ja meio que fica organizado -->
 
 
 
         <footer id="rodape">
-            <p>Copyright &copy; 2013 - by Gustavo Guanabara <br />
-                <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | <a
-                    href="http://twitter.com/cursosemvideo" target="_blank">Twitter</a>
-            </p>
+            <p>Copyright &copy; 2022 - by Leticia Santos <br/>
+                <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a>
+                <a href="http://twitter.com/cursosemvideo" target="_blank">Twitter</a></p>
         </footer>
 
 
