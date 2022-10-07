@@ -30,7 +30,7 @@ a:hover {
 
 body{
    /*background-image: url(""); vai colocar a imagem como fundo do site*/ 
-    background-color: #dddddd;
+    background-color: #e7b30763;/*ultimo fundo da janela*/
     color: rgb(72,45,45);
     font-family: Arial, sans-serif;
 }

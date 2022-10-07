@@ -1,79 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head> <!--VAI FAZER AS CONFIGURAÇÕES COMPORTAMENTAIS DO SITE-->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tudo sobre google glass</title>
-        <link rel="stylesheet" href="_css/estilo.css">
-     </head>
+<head>
+    <!--VAI FAZER AS CONFIGURAÇÕES COMPORTAMENTAIS DO SITE-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre google glass</title>
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
+</head>
 
-    <!--COLOQUEI OS CÓDIGOS JAVASCRIPT EM UM ARQUIVO SEPARADO FUNCOES.JS e chamei com o comando abaixo-->
-    <script languange="javascript" src="_javascript/funcoes.js"></Script>
-   
-    <body>
-        <div id="interface"> <!--delimitar a pagina do site e identificando-->
-            <header id="cabecalho"> <!--cabeçalho do site-->
-                <hgroup> <!--um grupo de titulos (semantica)-->
-                    <h1>Google Glass</h1>
-                    <h2>A revolução do Google está chegando</h2>
-                </hgroup>
+<!--COLOQUEI OS CÓDIGOS JAVASCRIPT EM UM ARQUIVO SEPARADO FUNCOES.JS e chamei com o comando abaixo-->
+<script languange="javascript" src="_javascript/funcoes.js"></Script>
 
-                <img id="icone"src="_imagens/glass-oculos-preto-peq.png" alt="">
+<body>
+    <div id="interface">
+        <!--delimitar a pagina do site e identificando-->
+        <header id="cabecalho">
+            <!--cabeçalho do site-->
+            <hgroup>
+                <!--um grupo de titulos (semantica)-->
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
 
-                <nav id="menu"><!--BARRA DE NAVEGAÇÃO DA PAGINA-->
-                    <h1>Menu Principal</h1> <!--TITULO-->
-                    <ul><!--LISTA ORDENADA-->
-                    <li onmousemove="mudaFoto('_imagens/Home.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="index.html">Home</a></li><!--ITENS DA LISTA-->
-                    <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="specs.html">Especificações</a></li><!--ITENS DA LISTA COM LINK -->
-                    <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="fotos.html">Fotos</a></li>
-                    <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="multimidia.html">Multimídia</a></li>
-                    <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
-                    </ul>
-                </nav>
-            </header> <!--cabeçalho do site-->
+            <img id="icone" src="_imagens/glass-oculos-preto-peq.png" alt="">
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+            <nav id="menu">
+                <!--BARRA DE NAVEGAÇÃO DA PAGINA-->
+                <h1>Menu Principal</h1>
+                <!--TITULO-->
+                <ul>
+                    <!--LISTA ORDENADA-->
+                    <li onmousemove="mudaFoto('_imagens/Home.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a
+                            href="index.html">Home</a></li>
+                    <!--ITENS DA LISTA-->
+                    <li onmousemove="mudaFoto('_imagens/especificacoes.png')"
+                        onmouseout="mudaFoto('_imagens/contato.png')"> <a href="specs.html">Especificações</a></li>
+                    <!--ITENS DA LISTA COM LINK -->
+                    <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a
+                            href="fotos.html">Fotos</a></li>
+                    <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="multimidia.html">Multimídia</a>
+                    </li>
+                    <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
+                            href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--cabeçalho do site-->
 
 
-[BOTÃO ENVIAR]
-
-<footer id="rodape">
-    <p>Copyright &copy; 2013 - by Gustavo Guanabara <br/>
-    <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | <a href="http://twitter.com/cursosemvideo" target="_blank">Twitter</a></p>
-</footer>
+        <section id="corpo-outro">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Saiba tudo sobre o Google Glass</h1>
+                        <h2>por Letícia Santos</h2>
+                        <h3 class="direita">Atualizado em Agosto de 2022</h3>
+                    </hgroup>
+                </header>
 
 
 
-</div>
+
+
+
+               <!-- o label serve para identificar o objeto relativo a ele... possui funcionalidade semantica, assim o objeto torna-se clicavel para o usuário-  -->
+                <form action="">
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+
+                        <p><label for="cnome">Nome:</label>
+                            <input type="text" name="tname" id="cnome" size="20" maxlength="30" placeholder="Nome completo"/></p>
+
+                        <p><label for="csenha">Senha:</label>
+                            <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 digitos"/></p>
+
+                        <p><label for="cmail">E-mail: </label><input type="email" name="tmail" id="cmail" size="20" maxlength="20" placeholder="E-mail"/></p>
+
+
+
+                        <fieldset id="sexo">
+                            <legend>Sexo:</legend>
+                            <input type="radio" name="tsexo" id="cmasculino"/><label for="cmasculino">Masculino</label><br/>
+                            <input type="radio" name="tsexo" id="cfeminino"/><label for="cfeminino">Feminino</label>
+                        </fieldset>
+
+                        
+                        <p>Data de Nascimento:<input type="date" id="cdate"></p>
+                    </fieldset>
+
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                        <p><label for="crua">Logradouro: </label><input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="Rua, Atravessa, Avenida"></p>
+                        <p><label for="cnumero">Número:</label><input type="number" name="tnumero" id="cnumero" size="13" maxlength="80" min="0" max="99999"></p>
+                        <p><label for="cestado">Estado:</label></p>
+                        <p><label for="ccidade">Cidade:</label></p>
+                    </fieldset>
+
+
+                    <fieldset id="mensagem">
+                        <legend> Mensagem do Usuário</legend>
+                        <p>Grau de Urgência:</p>
+                        <P>Mensagem:</P>
+                    </fieldset>
+
+                    <fieldset id="pedido">
+                        <legend>Quero um Google Glass</legend>
+                        <p>Gostaria de adquirir um Google Glass quando</p>
+                        <p>disponível</p>
+                        <p>Cor:</p>
+                        <p>Quantidade:</p>
+                        <p>Preço Total: R$</p>
+                    </fieldset>
+
+                    [BOTÃO ENVIAR]
+
+                    </form>
+                <article>
+        </section>
+        <!--Ao colocar paragrafo e o nivel do titulo, o texto como um todo ja meio que fica organizado -->
+
+
+
+        <footer id="rodape">
+            <p>Copyright &copy; 2013 - by Gustavo Guanabara <br />
+                <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | <a
+                    href="http://twitter.com/cursosemvideo" target="_blank">Twitter</a>
+            </p>
+        </footer>
+
+
+    </div>
 </body>
+
 </html>
